@@ -56,3 +56,17 @@ cv2.waitKey(0)
 
 # Closing all the windows
 cv2.destroyAllWindows()
+
+
+
+The code first imports the required libraries - "drive" and "cv2" - to enable file system mounting and image processing. The "cv2_imshow" function is imported from the "google.colab.patches" library for displaying images.
+
+The code then mounts the Google Drive file system to the Colab runtime environment using the "drive.mount()" function, and sets the current working directory to the folder where the input image is located.
+
+The input image is loaded using the "cv2.imread()" function, and displayed using the "cv2_imshow()" function. The "cv2.waitKey()" function is called to wait for user input to close the image window, and the "cv2.destroyAllWindows()" function is called to close all windows.
+
+A copy of the input image is created using the "np.copy()" function, and converted to grayscale using the "cv2.cvtColor()" function. The grayscale image is displayed, and the "cv2.waitKey()" and "cv2.destroyAllWindows()" functions are called to wait for user input and close all windows.
+
+Gaussian blur is applied to the grayscale image using the "cv2.GaussianBlur()" function to remove noise, and the smoothed image is displayed. The "cv2.waitKey()" and "cv2.destroyAllWindows()" functions are called to wait for user input and close all windows.
+
+The Canny edge detection algorithm is applied to the smoothed grayscale image using the "cv2.Canny()" function, and the resulting edges are displayed. The "cv2
